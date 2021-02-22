@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="welcome" method="post">
+    {%csrf_token%}
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="enter username" name="uname">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="enter password" name="psw">
+
+    <button type="submit">Login</button>
+
+   <a href="password" >FORGET PASSWORD</a>
+<!--    <button type="reset">Forgot password</button>-->
+
+</form>
+</body>
+</html>
+{% endblock content %}
